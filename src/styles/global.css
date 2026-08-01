@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/700.css";
+
+@theme {
+  --color-paper: #F6F5F1;
+  --color-ink: #1B1D1F;
+  --color-blue: #5C87A0;
+  --color-blue-light: #A9C7DB;
+  --color-sage: #AFCBB8;
+  --color-lavender: #C3A8D1;
+
+  --font-mono: "IBM Plex Mono", monospace;
+}
