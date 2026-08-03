@@ -1,8 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects.js';
 ---
 
 <BaseLayout title="Katherine — Projects">
-	<!-- your projects content goes here -->
-     <h1>My Projects 0-0</h1>
+	<div class="px-20 py-14">
+		<h1 class="text-4xl font-bold">Projects</h1>
+		<p class="pt-4">Stuff I built, blah blah blah</p>
+
+		<div class="grid grid-cols-3 gap-8 pt-12">
+			{projects.map((project) => (
+				<a href={`/projects/${project.slug}`} class="block">
+					<div class="bg-blue-light p-6">
+						<h2 class="text-xl font-bold">{project.title}</h2>
+						<p>{project.description}</p>
+					</div>
+					<div class="bg-blue h-72 flex items-center justify-center">
+						Picture
+					</div>
+				</a>
+			))}
+		</div>
+	</div>
 </BaseLayout>
