@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const contacts = [
+  { label: 'Email', value: 'katherine@email.com', href: 'mailto:katherine@email.com' },
+  { label: 'LinkedIn', value: 'linkedin.com/in/katherine', href: 'https://linkedin.com/in/katherine' },
+  { label: 'GitHub', value: 'github.com/katherine', href: 'https://github.com/katherine' },
+];
+---
+
+<BaseLayout title="Katherine — Contact">
+	<div class="px-20 py-14 max-w-3xl">
+		<h1 class="text-4xl font-bold">Contact</h1>
+		<p class="pt-4">Let's connect!</p>
+
+		<ul class="flex flex-col gap-4 pt-12">
+			{contacts.map((contact) => (
+				<li>
+					<a href={contact.href} class="hover:text-blue transition-colors">
+						{contact.label} — {contact.value}
+					</a>
+				</li>
+			))}
+		</ul>
+	</div>
+</BaseLayout>
