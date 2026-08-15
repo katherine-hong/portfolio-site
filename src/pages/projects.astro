@@ -10,12 +10,12 @@ import { projects } from '../data/projects.js';
 
 		<div class="grid grid-cols-3 gap-8 pt-12">
 			{projects.map((project) => (
-				<a href={`/projects/${project.slug}`} class="block">
-					<div class="bg-blue-light p-6 min-h-40">
+				<a href={`/projects/${project.slug}`} class="block rounded-2xl overflow-hidden bg-gray-50 border border-gray-200 shadow-md hover:shadow-lg transition-shadow pt-4 px-4">
+					<div class="pb-6 min-h-36">
 						<h2 class="text-xl font-bold">{project.title}</h2>
-						<p>{project.description}</p>
+						<p class="pt-2 text-sm">{project.description}</p>
 					</div>
-					<div class="bg-blue h-72 flex items-center justify-center">
+					<div class="rounded-t-xl bg-blue-light h-64 flex items-center justify-center">
 						Picture
 					</div>
 				</a>
