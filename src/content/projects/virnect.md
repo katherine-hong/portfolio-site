@@ -1,7 +1,7 @@
 ---
 title: Thalassophobia VR Simulation
 description: A virtual reality experience that makes you question the ocean, and what lurks beneath.
-image: /images/project-two.png
+image: /images/virnect.jpg
 techStack: [Unity, C#]
 order: 2
 ---
