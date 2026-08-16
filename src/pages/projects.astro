@@ -1,27 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { projects } from '../data/projects.js';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort(
+	(a: CollectionEntry<'projects'>, b: CollectionEntry<'projects'>) => a.data.order - b.data.order
+);
 ---
 
 <BaseLayout title="Katherine — Projects">
 	<div class="px-20 py-14">
 		<h1 class="text-4xl font-bold">Projects</h1>
-		<p class="pt-4">What I've been building, from past internships to passion projects.<br><br></p>
+		<p class="pt-4">What I've been building, from past internships to passion projects.</p>
 
 		<div class="grid grid-cols-2 gap-8 pt-12">
-			{projects.map((project) => (
-				<a href={`/projects/${project.slug}`} class="block rounded-2xl overflow-hidden bg-gray-50 border border-gray-200 shadow-md hover:shadow-lg transition-shadow pt-4 px-4">
+			{projects.map((project: CollectionEntry<'projects'>) => (
+				<a href={`/projects/${project.id}`} class="block rounded-2xl overflow-hidden bg-gray-50 border border-gray-200 shadow-md hover:shadow-lg transition-shadow pt-4 px-4">
 					<div class="pb-6 min-h-24">
-						<h2 class="text-xl font-bold">{project.title}</h2>
-						<p class="pt-2 text-sm">{project.description}</p>
+						<h2 class="text-xl font-bold">{project.data.title}</h2>
+						<p class="pt-2 text-sm">{project.data.description}</p>
 					</div>
-					<div class="rounded-t-xl bg-blue-light h-96 flex items-center justify-center">
-						<img
-							src={project.image}
-							alt={project.title}
-							class="rounded-t-xl h-96 w-full object-cover"
-						/>
-					</div>
+					<img src={project.data.image} alt={project.data.title} class="rounded-t-xl h-96 w-full object-cover" />
 				</a>
 			))}
 		</div>
