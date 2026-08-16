@@ -8,30 +8,31 @@ export const projects = [
   {
     slug: 'virnect',
     title: 'Thalassophobia VR Simulation',
-    description: 'A virtual reality experience that makes you question the ocean.',
+    description: 'A virtual reality experience that makes you question the ocean, and what lurks beneath.',
     image: '/images/project-two.png',
   },
   {
     slug: 'niantic',
     title: 'Catch a Terp',
     description: 'Built with Niantic’s 8th Wall Studio, explore UMD’s campus using AR, while collecting cute terrapins!',
-    image: '/images/project-six.png',
+    image: '/images/niantic.png',
   },
   {
     slug: 'gcp-pipeline',
     title: 'Serverless ETL Pipeline',
     description: 'Event-driven GCP pipeline that automates multi-source CSV ingestion from third-party athletic sensors into a unified MySQL database.',
-    image: '/images/project-three.png',
+    image: '/images/gcp-pipeline.png',
   },
   {
     slug: 'player-programming',
     title: 'Mobility Screening System',
     description: 'A Python recommendation engine that translates raw mobility test data into customized exercise routines based on specific physical deficits.',
+    image: '/images/player-programming.png'
   },
   {
     slug: 'full-circle',
     title: 'Full Circle',
     description: 'In this 3D platformer game, play as a fun little guy and navigate across a polluted world, to find the reason behind it all.',
-    image: '/images/project-five.png',
+    image: '/images/full-circle.png',
   }
 ];
